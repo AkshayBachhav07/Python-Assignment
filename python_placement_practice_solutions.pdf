@@ -1,0 +1,2498 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold >>
+endobj
+5 0 obj
+<< /Length 4690 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+BT /F2 18 Tf 0.1 0.15 0.3 rg
+40.0 786.89 Td (PYTHON PLACEMENT PRACTICE: 100 LEVEL 4) Tj ET
+BT /F1 10 Tf 0.3 0.3 0.3 rg
+40.0 773.89 Td (Complete Implementation, Source Code & Terminal Execution Verification) Tj ET
+0.94 0.96 0.98 rg
+40.0 730.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 730.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 735.89 Td (Q001 | Ranked transaction totals) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 724.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 714.89 Td (def ranked_transactions\(amounts\):) Tj ET
+48.0 705.39 Td (    categories = defaultdict\(int\)) Tj ET
+48.0 695.89 Td (    for a in amounts:) Tj ET
+48.0 686.39 Td (        d = Decimal\(str\(a\)\).quantize\(Decimal\("0.01"\), rounding=ROUND_HALF_UP\)) Tj ET
+48.0 676.89 Td (        categories[f"{d:.2f}"] += 1) Tj ET
+48.0 667.39 Td (    return sorted\(categories.items\(\), key=lambda x: \(-x[1], x[0]\)\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 654.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 644.89 Td ([\('8.50', 2\), \('12.34', 1\), \('12.35', 1\), \('3.00', 1\)]) Tj ET
+0.94 0.96 0.98 rg
+40.0 607.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 607.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 612.39 Td (Q002 | Stable list partition by multiple rules) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 601.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 591.39 Td (def stable_partition\(values\):) Tj ET
+48.0 581.89 Td (    neg = [x for x in values if x < 0]) Tj ET
+48.0 572.39 Td (    zeros = [x for x in values if x == 0]) Tj ET
+48.0 562.89 Td (    pos = [x for x in values if x > 0]) Tj ET
+48.0 553.39 Td (    return neg + zeros + pos) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 540.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 530.89 Td ([-2, -5, 0, 0, 4, 7, 3]) Tj ET
+0.94 0.96 0.98 rg
+40.0 493.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 493.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 498.39 Td (Q003 | Circular window statistics) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 487.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 477.39 Td (def circular_window_stats\(values, k\):) Tj ET
+48.0 467.89 Td (    n = len\(values\)) Tj ET
+48.0 458.39 Td (    res = []) Tj ET
+48.0 448.89 Td (    for i in range\(n\):) Tj ET
+48.0 439.39 Td (        window = [values[\(i + j\) % n] for j in range\(k\)]) Tj ET
+48.0 429.89 Td (        res.append\(round\(sum\(window\) / k, 2\)\)) Tj ET
+48.0 420.39 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 407.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 397.89 Td ([4.0, 6.0, 5.33, 4.67]) Tj ET
+0.94 0.96 0.98 rg
+40.0 360.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 360.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 365.39 Td (Q004 | Tuple record normalization) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 354.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 344.39 Td (def normalize_records\(records\):) Tj ET
+48.0 334.89 Td (    best = {}) Tj ET
+48.0 325.39 Td (    for emp_id, name, dept, sal in records:) Tj ET
+48.0 315.89 Td (        if emp_id not in best or sal > best[emp_id][3]:) Tj ET
+48.0 306.39 Td (            best[emp_id] = \(emp_id, name, dept, sal\)) Tj ET
+48.0 296.89 Td (    return tuple\(sorted\(best.values\(\), key=lambda x: \(x[2], -x[3]\)\)\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 284.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 274.39 Td (\(\(4, 'Mina', 'HR', 48000\), \(2, 'Ravi', 'HR', 42000\), \(3, 'Asha', 'IT', 56000\)\)) Tj ET
+0.94 0.96 0.98 rg
+40.0 236.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 236.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 241.89 Td (Q005 | Set-based access audit) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 230.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 220.89 Td (def access_audit\(read_s, write_s, del_s, all_u\):) Tj ET
+48.0 211.39 Td (    conflicts = sorted\(list\(del_s & \(read_s | write_s\)\)\)) Tj ET
+48.0 201.89 Td (    all_three = sorted\(list\(read_s & write_s & del_s\)\)) Tj ET
+48.0 192.39 Td (    none_perm = sorted\(list\(all_u - \(read_s | write_s | del_s\)\)\)) Tj ET
+48.0 182.89 Td (    return f"conflicts={conflicts}; all_three={all_three}; none={none_perm}") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 170.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 160.39 Td (conflicts=[3, 7]; all_three=[7]; none=[6, 8]) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 1 of 21) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Length 4995 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q006 | Dictionary inversion with collisions) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def invert_dict\(d\):) Tj ET
+48.0 758.39 Td (    inv = defaultdict\(list\)) Tj ET
+48.0 748.89 Td (    for k, v in d.items\(\):) Tj ET
+48.0 739.39 Td (        inv[v].append\(k\)) Tj ET
+48.0 729.89 Td (    return dict\(inv\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 717.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 707.39 Td ({2: ['red', 'green'], 1: ['blue', 'black']}) Tj ET
+0.94 0.96 0.98 rg
+40.0 669.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 669.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 674.89 Td (Q007 | Nested inventory reconciliation) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 663.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 653.89 Td (def reconcile_inventory\(a, b\):) Tj ET
+48.0 644.39 Td (    res = {}) Tj ET
+48.0 634.89 Td (    all_items = set\(a.keys\(\)\) | set\(b.keys\(\)\)) Tj ET
+48.0 625.39 Td (    for item in all_items:) Tj ET
+48.0 615.89 Td (        res[item] = {}) Tj ET
+48.0 606.39 Td (        wh_a = a.get\(item, {}\)) Tj ET
+48.0 596.89 Td (        wh_b = b.get\(item, {}\)) Tj ET
+48.0 587.39 Td (        for wh in set\(wh_a.keys\(\)\) | set\(wh_b.keys\(\)\):) Tj ET
+48.0 577.89 Td (            res[item][wh] = wh_a.get\(wh, 0\) + wh_b.get\(wh, 0\)) Tj ET
+48.0 568.39 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 555.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 545.89 Td ({'pen': {'Mumbai': 7, 'Pune': 15, 'Nashik': 4}, 'bag': {'Nashik': 2}, 'book': {'Pune': 3}}) Tj ET
+0.94 0.96 0.98 rg
+40.0 508.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 508.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 513.39 Td (Q008 | String canonicalization) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 502.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 492.39 Td (def canonicalize\(text\):) Tj ET
+48.0 482.89 Td (    clean = re.sub\(r'[^a-zA-Z0-9\\s]', '', text\)) Tj ET
+48.0 473.39 Td (    return ' '.join\(clean.lower\(\).split\(\)\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 460.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 450.89 Td (datascience is fun) Tj ET
+0.94 0.96 0.98 rg
+40.0 413.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 413.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 418.39 Td (Q009 | Immutable string run analysis) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 407.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 397.39 Td (def longest_run\(s\):) Tj ET
+48.0 387.89 Td (    if not s: return None) Tj ET
+48.0 378.39 Td (    max_char, max_len, max_idx = s[0], 1, 0) Tj ET
+48.0 368.89 Td (    curr_char, curr_len, curr_idx = s[0], 1, 0) Tj ET
+48.0 359.39 Td (    for i in range\(1, len\(s\)\):) Tj ET
+48.0 349.89 Td (        if s[i] == curr_char:) Tj ET
+48.0 340.39 Td (            curr_len += 1) Tj ET
+48.0 330.89 Td (        else:) Tj ET
+48.0 321.39 Td (            if curr_len > max_len:) Tj ET
+48.0 311.89 Td (                max_char, max_len, max_idx = curr_char, curr_len, curr_idx) Tj ET
+48.0 302.39 Td (            curr_char, curr_len, curr_idx = s[i], 1, i) Tj ET
+48.0 292.89 Td (    if curr_len > max_len:) Tj ET
+48.0 283.39 Td (        max_char, max_len, max_idx = curr_char, curr_len, curr_idx) Tj ET
+48.0 273.89 Td (    return \(max_char, max_len, max_idx\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 261.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 251.39 Td (\('c', 4, 5\)) Tj ET
+0.94 0.96 0.98 rg
+40.0 213.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 213.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 218.89 Td (Q010 | Nested collection frequency) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 207.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 197.89 Td (def nested_frequencies\(matrix\):) Tj ET
+48.0 188.39 Td (    counts = defaultdict\(int\)) Tj ET
+48.0 178.89 Td (    row_map = defaultdict\(list\)) Tj ET
+48.0 169.39 Td (    for r_idx, row in enumerate\(matrix\):) Tj ET
+48.0 159.89 Td (        for val in row:) Tj ET
+48.0 150.39 Td (            counts[val] += 1) Tj ET
+48.0 140.89 Td (        for val in set\(row\):) Tj ET
+48.0 131.39 Td (            row_map[val].append\(r_idx\)) Tj ET
+48.0 121.88999999999999 Td (    return {k: \(counts[k], sorted\(row_map[k]\)\) for k in sorted\(counts.keys\(\)\)}) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 109.38999999999999 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 99.38999999999999 Td ({1: \(3, [0, 2]\), 2: \(2, [0, 1]\), 3: \(3, [1, 2]\)}) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 2 of 21) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Length 3902 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q011 | Dictionary key dependency chain) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def resolve_deps\(deps\):) Tj ET
+48.0 758.39 Td (    adj = defaultdict\(list\)) Tj ET
+48.0 748.89 Td (    in_deg = defaultdict\(int\)) Tj ET
+48.0 739.39 Td (    nodes = set\(deps.keys\(\)\)) Tj ET
+48.0 729.89 Td (    for k, v in deps.items\(\):) Tj ET
+48.0 720.39 Td (        if v is not None:) Tj ET
+48.0 710.89 Td (            nodes.add\(v\)) Tj ET
+48.0 701.39 Td (            adj[v].append\(k\)) Tj ET
+48.0 691.89 Td (            in_deg[k] += 1) Tj ET
+48.0 682.39 Td (            in_deg.setdefault\(v, 0\)) Tj ET
+48.0 672.89 Td (        else:) Tj ET
+48.0 663.39 Td (            in_deg.setdefault\(k, 0\)) Tj ET
+48.0 653.89 Td (    queue = [n for n in nodes if in_deg[n] == 0]) Tj ET
+48.0 644.39 Td (    order = []) Tj ET
+48.0 634.89 Td (    while queue:) Tj ET
+48.0 625.39 Td (        u = queue.pop\(0\)) Tj ET
+48.0 615.89 Td (        order.append\(u\)) Tj ET
+48.0 606.39 Td (        for neighbor in adj[u]:) Tj ET
+48.0 596.89 Td (            in_deg[neighbor] -= 1) Tj ET
+48.0 587.39 Td (            if in_deg[neighbor] == 0:) Tj ET
+48.0 577.89 Td (                queue.append\(neighbor\)) Tj ET
+48.0 568.39 Td (    return \(True, order\) if len\(order\) == len\(nodes\) else \(False, "Cycle detected"\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 555.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 545.89 Td (\(True, ['lint', 'test', 'build']\)) Tj ET
+0.94 0.96 0.98 rg
+40.0 508.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 508.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 513.39 Td (Q012 | Two-list stable multiset difference) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 502.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 492.39 Td (def stable_multiset_diff\(a, b\):) Tj ET
+48.0 482.89 Td (    counts_b = Counter\(b\)) Tj ET
+48.0 473.39 Td (    res = []) Tj ET
+48.0 463.89 Td (    for x in a:) Tj ET
+48.0 454.39 Td (        if counts_b[x] > 0:) Tj ET
+48.0 444.89 Td (            counts_b[x] -= 1) Tj ET
+48.0 435.39 Td (        else:) Tj ET
+48.0 425.89 Td (            res.append\(x\)) Tj ET
+48.0 416.39 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 403.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 393.89 Td ([3, 2, 4, 1]) Tj ET
+0.94 0.96 0.98 rg
+40.0 356.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 356.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 361.39 Td (Q013 | String edit-distance threshold) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 350.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 340.39 Td (def is_one_edit_distance\(s1, s2\):) Tj ET
+48.0 330.89 Td (    m, n = len\(s1\), len\(s2\)) Tj ET
+48.0 321.39 Td (    if abs\(m - n\) > 1: return False) Tj ET
+48.0 311.89 Td (    if m > n: return is_one_edit_distance\(s2, s1\)) Tj ET
+48.0 302.39 Td (    i = j = diffs = 0) Tj ET
+48.0 292.89 Td (    while i < m and j < n:) Tj ET
+48.0 283.39 Td (        if s1[i] != s2[j]:) Tj ET
+48.0 273.89 Td (            diffs += 1) Tj ET
+48.0 264.39 Td (            if diffs > 1: return False) Tj ET
+48.0 254.89 Td (            if m == n: i += 1; j += 1) Tj ET
+48.0 245.39 Td (            else: j += 1) Tj ET
+48.0 235.89 Td (        else:) Tj ET
+48.0 226.39 Td (            i += 1; j += 1) Tj ET
+48.0 216.89 Td (    return True) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 204.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 194.39 Td (True) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 3 of 21) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Length 4140 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q014 | Boolean expression evaluator) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def eval_boolean_expr\(expr, values\):) Tj ET
+48.0 758.39 Td (    tokens = re.findall\(r'\\\(|\\\)|AND|OR|NOT|[A-Za-z0-9_]+', expr\)) Tj ET
+48.0 748.89 Td (    def parse_expr\(pos\):) Tj ET
+48.0 739.39 Td (        res, pos = parse_and\(pos\)) Tj ET
+48.0 729.89 Td (        while pos < len\(tokens\) and tokens[pos] == 'OR':) Tj ET
+48.0 720.39 Td (            r2, pos = parse_and\(pos + 1\)) Tj ET
+48.0 710.89 Td (            res = res or r2) Tj ET
+48.0 701.39 Td (        return res, pos) Tj ET
+48.0 691.89 Td (    def parse_and\(pos\):) Tj ET
+48.0 682.39 Td (        res, pos = parse_not\(pos\)) Tj ET
+48.0 672.89 Td (        while pos < len\(tokens\) and tokens[pos] == 'AND':) Tj ET
+48.0 663.39 Td (            r2, pos = parse_not\(pos + 1\)) Tj ET
+48.0 653.89 Td (            res = res and r2) Tj ET
+48.0 644.39 Td (        return res, pos) Tj ET
+48.0 634.89 Td (    def parse_not\(pos\):) Tj ET
+48.0 625.39 Td (        if pos < len\(tokens\) and tokens[pos] == 'NOT':) Tj ET
+48.0 615.89 Td (            res, pos = parse_not\(pos + 1\)) Tj ET
+48.0 606.39 Td (            return not res, pos) Tj ET
+48.0 596.89 Td (        tok = tokens[pos]) Tj ET
+48.0 587.39 Td (        if tok == '\(':) Tj ET
+48.0 577.89 Td (            res, pos = parse_expr\(pos + 1\)) Tj ET
+48.0 568.39 Td (            return res, pos + 1) Tj ET
+48.0 558.89 Td (        return values.get\(tok, False\), pos + 1) Tj ET
+48.0 549.39 Td (    res, _ = parse_expr\(0\)) Tj ET
+48.0 539.89 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 527.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 517.39 Td (True) Tj ET
+0.94 0.96 0.98 rg
+40.0 479.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 479.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 484.89 Td (Q015 | Progressive tax calculation) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 473.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 463.89 Td (def progressive_tax\(income\):) Tj ET
+48.0 454.39 Td (    orig = income) Tj ET
+48.0 444.89 Td (    tax = 0.0) Tj ET
+48.0 435.39 Td (    if income > 1000000:) Tj ET
+48.0 425.89 Td (        tax += \(income - 1000000\) * 0.20) Tj ET
+48.0 416.39 Td (        income = 1000000) Tj ET
+48.0 406.89 Td (    if income > 500000:) Tj ET
+48.0 397.39 Td (        tax += \(income - 500000\) * 0.10) Tj ET
+48.0 387.89 Td (        income = 500000) Tj ET
+48.0 378.39 Td (    if income > 250000:) Tj ET
+48.0 368.89 Td (        tax += \(income - 250000\) * 0.05) Tj ET
+48.0 359.39 Td (    eff_rate = \(tax / orig\) * 100) Tj ET
+48.0 349.89 Td (    return f"Tax: {tax:.2f}; Effective rate: {eff_rate:.2f}%") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 337.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 327.39 Td (Tax: 132500.00; Effective rate: 9.81%) Tj ET
+0.94 0.96 0.98 rg
+40.0 289.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 289.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 294.89 Td (Q016 | Date validity without date libraries) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 283.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 273.89 Td (def validate_date\(d, m, y\):) Tj ET
+48.0 264.39 Td (    if y < 1 or m < 1 or m > 12 or d < 1: return "Invalid date.") Tj ET
+48.0 254.89 Td (    leap = \(y % 4 == 0 and y % 100 != 0\) or \(y % 400 == 0\)) Tj ET
+48.0 245.39 Td (    dim = [31, 29 if leap else 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]) Tj ET
+48.0 235.89 Td (    return "Valid date." if d <= dim[m - 1] else "Invalid date.") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 223.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 213.39 Td (Invalid date.) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 4 of 21) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Length 4656 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q017 | Sequence stopping with dual conditions) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def sequence_stopping\(values\):) Tj ET
+48.0 758.39 Td (    proc, r_sum, z_run, reason = [], 0, 0, "end of input") Tj ET
+48.0 748.89 Td (    for v in values:) Tj ET
+48.0 739.39 Td (        proc.append\(v\)) Tj ET
+48.0 729.89 Td (        r_sum += v) Tj ET
+48.0 720.39 Td (        z_run = \(z_run + 1\) if v == 0 else 0) Tj ET
+48.0 710.89 Td (        if z_run == 3:) Tj ET
+48.0 701.39 Td (            reason = "three consecutive zeros") Tj ET
+48.0 691.89 Td (            break) Tj ET
+48.0 682.39 Td (        if r_sum > 50:) Tj ET
+48.0 672.89 Td (            reason = "sum exceeds 50") Tj ET
+48.0 663.39 Td (            break) Tj ET
+48.0 653.89 Td (    return f"processed={proc}; count={len\(proc\)}; sum={r_sum}; reason='{reason}'") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 641.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 631.39 Td (processed=[8, 12, 0, 4, 0, 0, 0]; count=7; sum=24; reason='three consecutive zeros') Tj ET
+0.94 0.96 0.98 rg
+40.0 593.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 593.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 598.89 Td (Q018 | Prime gap detector) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 587.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 577.89 Td (def prime_gap\(L, R\):) Tj ET
+48.0 568.39 Td (    def is_p\(n\):) Tj ET
+48.0 558.89 Td (        if n < 2: return False) Tj ET
+48.0 549.39 Td (        return all\(n % i != 0 for i in range\(2, int\(n**0.5\) + 1\)\)) Tj ET
+48.0 539.89 Td (    primes = [p for p in range\(L, R + 1\) if is_p\(p\)]) Tj ET
+48.0 530.39 Td (    if len\(primes\) < 2: return None) Tj ET
+48.0 520.89 Td (    best_pair, max_gap = None, -1) Tj ET
+48.0 511.39 Td (    for i in range\(len\(primes\) - 1\):) Tj ET
+48.0 501.89 Td (        g = primes[i+1] - primes[i]) Tj ET
+48.0 492.39 Td (        if g > max_gap:) Tj ET
+48.0 482.89 Td (            max_gap = g) Tj ET
+48.0 473.39 Td (            best_pair = \(primes[i], primes[i+1]\)) Tj ET
+48.0 463.89 Td (    return f"{best_pair} gap={max_gap}") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 451.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 441.39 Td (\(23, 29\) gap=6) Tj ET
+0.94 0.96 0.98 rg
+40.0 403.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 403.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 408.89 Td (Q019 | Digit pattern classification) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 397.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 387.89 Td (def classify_digits\(n\):) Tj ET
+48.0 378.39 Td (    s = str\(n\)) Tj ET
+48.0 368.89 Td (    if len\(set\(s\)\) == 1: return "Constant-digit") Tj ET
+48.0 359.39 Td (    if all\(s[i] < s[i+1] for i in range\(len\(s\)-1\)\): return "Strictly increasing") Tj ET
+48.0 349.89 Td (    if all\(s[i] > s[i+1] for i in range\(len\(s\)-1\)\): return "Strictly decreasing") Tj ET
+48.0 340.39 Td (    return "Neither") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 327.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 317.89 Td (Strictly increasing) Tj ET
+0.94 0.96 0.98 rg
+40.0 280.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 280.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 285.39 Td (Q020 | Bounded nested-loop pair search) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 274.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 264.39 Td (def bounded_pair_search\(values, target\):) Tj ET
+48.0 254.89 Td (    seen = set\(\)) Tj ET
+48.0 245.39 Td (    pairs = []) Tj ET
+48.0 235.89 Td (    for i in range\(len\(values\)\):) Tj ET
+48.0 226.39 Td (        for j in range\(i + 1, len\(values\)\):) Tj ET
+48.0 216.89 Td (            if values[i] + values[j] == target:) Tj ET
+48.0 207.39 Td (                vp = \(min\(values[i], values[j]\), max\(values[i], values[j]\)\)) Tj ET
+48.0 197.89 Td (                if vp not in seen:) Tj ET
+48.0 188.39 Td (                    seen.add\(vp\)) Tj ET
+48.0 178.89 Td (                    pairs.append\(\(i, j\)\)) Tj ET
+48.0 169.39 Td (    return pairs) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 156.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 146.89 Td ([\(0, 3\), \(4, 5\)]) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 5 of 21) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Length 5019 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q021 | Alternating harmonic accumulator) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def alternating_harmonic\(n\):) Tj ET
+48.0 758.39 Td (    if n < 1: raise ValueError\("n must be >= 1"\)) Tj ET
+48.0 748.89 Td (    s = sum\(\(\(-1\)**i / \(i + 1\)\) for i in range\(n\)\)) Tj ET
+48.0 739.39 Td (    return f"{s:.6f}") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 726.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 716.89 Td (0.783333) Tj ET
+0.94 0.96 0.98 rg
+40.0 679.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 679.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 684.39 Td (Q022 | Run-length threshold detector) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 673.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 663.39 Td (def run_length_threshold\(values, k\):) Tj ET
+48.0 653.89 Td (    if not values: return None) Tj ET
+48.0 644.39 Td (    n = len\(values\)) Tj ET
+48.0 634.89 Td (    idx = 0) Tj ET
+48.0 625.39 Td (    while idx < n:) Tj ET
+48.0 615.89 Td (        curr = values[idx]) Tj ET
+48.0 606.39 Td (        run_len = 0) Tj ET
+48.0 596.89 Td (        while idx + run_len < n and values[idx + run_len] == curr:) Tj ET
+48.0 587.39 Td (            run_len += 1) Tj ET
+48.0 577.89 Td (        if run_len >= k:) Tj ET
+48.0 568.39 Td (            return \(curr, idx, run_len\)) Tj ET
+48.0 558.89 Td (        idx += run_len) Tj ET
+48.0 549.39 Td (    return None) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 536.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 526.89 Td (\(2, 2, 3\)) Tj ET
+0.94 0.96 0.98 rg
+40.0 489.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 489.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 494.39 Td (Q023 | Perfect-number range with divisor optimization) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 483.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 473.39 Td (def perfect_numbers\(L, R\):) Tj ET
+48.0 463.89 Td (    def is_p\(n\):) Tj ET
+48.0 454.39 Td (        if n < 2: return False) Tj ET
+48.0 444.89 Td (        divs = {1}) Tj ET
+48.0 435.39 Td (        for i in range\(2, int\(n**0.5\) + 1\):) Tj ET
+48.0 425.89 Td (            if n % i == 0:) Tj ET
+48.0 416.39 Td (                divs.add\(i\)) Tj ET
+48.0 406.89 Td (                divs.add\(n // i\)) Tj ET
+48.0 397.39 Td (        return sum\(divs\) == n) Tj ET
+48.0 387.89 Td (    return [x for x in range\(L, R + 1\) if is_p\(x\)]) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 375.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 365.39 Td ([6, 28, 496]) Tj ET
+0.94 0.96 0.98 rg
+40.0 327.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 327.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 332.89 Td (Q024 | Multi-rule number filter) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 321.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 311.89 Td (def multi_rule_filter\(n\):) Tj ET
+48.0 302.39 Td (    res = [) Tj ET
+48.0 292.89 Td (        x for x in range\(1, n + 1\)) Tj ET
+48.0 283.39 Td (        if \(\(x % 3 == 0\) + \(x % 5 == 0\) + \(x % 7 == 0\) == 1\)) Tj ET
+48.0 273.89 Td (        and sum\(int\(d\) for d in str\(x\)\) % 2 == 0) Tj ET
+48.0 264.39 Td (    ]) Tj ET
+48.0 254.89 Td (    return f"values={res} count={len\(res\)}") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 242.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 232.39 Td (values=[6, 20, 24, 28] count=4) Tj ET
+0.94 0.96 0.98 rg
+40.0 194.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 194.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 199.89 Td (Q025 | Matrix boundary traversal) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 188.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 178.89 Td (def matrix_boundary\(matrix\):) Tj ET
+48.0 169.39 Td (    if not matrix or not matrix[0]: return []) Tj ET
+48.0 159.89 Td (    R, C = len\(matrix\), len\(matrix[0]\)) Tj ET
+48.0 150.39 Td (    if R == 1: return matrix[0]) Tj ET
+48.0 140.89 Td (    if C == 1: return [matrix[r][0] for r in range\(R\)]) Tj ET
+48.0 131.39 Td (    res = [matrix[0][c] for c in range\(C\)]) Tj ET
+48.0 121.88999999999999 Td (    res += [matrix[r][C - 1] for r in range\(1, R\)]) Tj ET
+48.0 112.38999999999999 Td (    res += [matrix[R - 1][c] for c in range\(C - 2, -1, -1\)]) Tj ET
+48.0 102.88999999999999 Td (    res += [matrix[r][0] for r in range\(R - 2, 0, -1\)]) Tj ET
+48.0 93.38999999999999 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 80.88999999999999 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 70.88999999999999 Td ([1, 2, 3, 4, 8, 12, 11, 10, 9, 5]) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 6 of 21) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Length 4157 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q026 | Automorphic numbers in a range) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def automorphic_range\(L, R\):) Tj ET
+48.0 758.39 Td (    res = []) Tj ET
+48.0 748.89 Td (    for n in range\(L, R + 1\):) Tj ET
+48.0 739.39 Td (        mod, temp = 1, n) Tj ET
+48.0 729.89 Td (        while temp > 0:) Tj ET
+48.0 720.39 Td (            mod *= 10) Tj ET
+48.0 710.89 Td (            temp //= 10) Tj ET
+48.0 701.39 Td (        if \(n * n\) % mod == n:) Tj ET
+48.0 691.89 Td (            res.append\(n\)) Tj ET
+48.0 682.39 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 669.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 659.89 Td ([1, 5, 6, 25, 76, 376]) Tj ET
+0.94 0.96 0.98 rg
+40.0 622.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 622.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 627.39 Td (Q027 | Armstrong numbers for arbitrary digit length) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 616.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 606.39 Td (def armstrong_range\(L, R\):) Tj ET
+48.0 596.89 Td (    res = []) Tj ET
+48.0 587.39 Td (    for n in range\(L, R + 1\):) Tj ET
+48.0 577.89 Td (        digits, t = [], n) Tj ET
+48.0 568.39 Td (        while t > 0:) Tj ET
+48.0 558.89 Td (            digits.append\(t % 10\)) Tj ET
+48.0 549.39 Td (            t //= 10) Tj ET
+48.0 539.89 Td (        if sum\(d**len\(digits\) for d in digits\) == n:) Tj ET
+48.0 530.39 Td (            res.append\(n\)) Tj ET
+48.0 520.89 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 508.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 498.39 Td ([1, 2, 3, 4, 5, 6, 7, 8, 9, 153, 370, 371, 407, 1634, 8208, 9474]) Tj ET
+0.94 0.96 0.98 rg
+40.0 460.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 460.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 465.89 Td (Q028 | Prime factorization with exponents) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 454.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 444.89 Td (def prime_factorization\(n\):) Tj ET
+48.0 435.39 Td (    if n <= 1: return []) Tj ET
+48.0 425.89 Td (    factors = []) Tj ET
+48.0 416.39 Td (    d = 2) Tj ET
+48.0 406.89 Td (    while d * d <= n:) Tj ET
+48.0 397.39 Td (        if n % d == 0:) Tj ET
+48.0 387.89 Td (            count = 0) Tj ET
+48.0 378.39 Td (            while n % d == 0:) Tj ET
+48.0 368.89 Td (                count += 1) Tj ET
+48.0 359.39 Td (                n //= d) Tj ET
+48.0 349.89 Td (            factors.append\(\(d, count\)\)) Tj ET
+48.0 340.39 Td (        d += 1) Tj ET
+48.0 330.89 Td (    if n > 1: factors.append\(\(n, 1\)\)) Tj ET
+48.0 321.39 Td (    return factors) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 308.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 298.89 Td ([\(2, 2\), \(3, 3\), \(7, 1\)]) Tj ET
+0.94 0.96 0.98 rg
+40.0 261.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 261.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 266.39 Td (Q029 | Fibonacci range intersection) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 255.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 245.39 Td (def fib_prime_odd_digitsum\(N\):) Tj ET
+48.0 235.89 Td (    is_p = lambda x: x > 1 and all\(x % i != 0 for i in range\(2, int\(x**0.5\) + 1\)\)) Tj ET
+48.0 226.39 Td (    a, b, res = 0, 1, []) Tj ET
+48.0 216.89 Td (    while b <= N:) Tj ET
+48.0 207.39 Td (        if is_p\(b\) and sum\(int\(d\) for d in str\(b\)\) % 2 != 0:) Tj ET
+48.0 197.89 Td (            res.append\(b\)) Tj ET
+48.0 188.39 Td (        a, b = b, a + b) Tj ET
+48.0 178.89 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 166.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 156.39 Td ([3, 5, 89]) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 7 of 21) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Length 4337 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q030 | GCD and LCM across a list) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def list_gcd_lcm\(values\):) Tj ET
+48.0 758.39 Td (    vals = [abs\(x\) for x in values]) Tj ET
+48.0 748.89 Td (    g = vals[0]) Tj ET
+48.0 739.39 Td (    for v in vals[1:]: g = math.gcd\(g, v\)) Tj ET
+48.0 729.89 Td (    l = vals[0]) Tj ET
+48.0 720.39 Td (    for v in vals[1:]: l = \(l * v\) // math.gcd\(l, v\) if \(l * v\) != 0 else 0) Tj ET
+48.0 710.89 Td (    return f"GCD={g}; LCM={l}") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 698.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 688.39 Td (GCD=12; LCM=360) Tj ET
+0.94 0.96 0.98 rg
+40.0 650.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 650.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 655.89 Td (Q031 | Digit permutation divisibility) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 644.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 634.89 Td (def digit_permutation_divisibility\(n\):) Tj ET
+48.0 625.39 Td (    digits = [int\(d\) for d in str\(n\)]) Tj ET
+48.0 615.89 Td (    return \(sum\(digits\) % 9 == 0\) and any\(d % 2 == 0 for d in digits\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 603.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 593.39 Td (False) Tj ET
+0.94 0.96 0.98 rg
+40.0 555.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 555.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 560.89 Td (Q032 | Binary-to-decimal validation) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 549.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 539.89 Td (def binary_to_decimal\(s\):) Tj ET
+48.0 530.39 Td (    if not s or any\(c not in '01' for c in s\):) Tj ET
+48.0 520.89 Td (        raise ValueError\("Invalid binary string"\)) Tj ET
+48.0 511.39 Td (    val = 0) Tj ET
+48.0 501.89 Td (    for c in s: val = \(val << 1\) + \(1 if c == '1' else 0\)) Tj ET
+48.0 492.39 Td (    return val) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 479.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 469.89 Td (45) Tj ET
+0.94 0.96 0.98 rg
+40.0 432.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 432.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 437.39 Td (Q033 | Decimal-to-base conversion) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 426.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 416.39 Td (def decimal_to_base\(n, b\):) Tj ET
+48.0 406.89 Td (    if n == 0: return "0") Tj ET
+48.0 397.39 Td (    chars = "0123456789ABCDEF") Tj ET
+48.0 387.89 Td (    res = []) Tj ET
+48.0 378.39 Td (    while n > 0:) Tj ET
+48.0 368.89 Td (        res.append\(chars[n % b]\)) Tj ET
+48.0 359.39 Td (        n //= b) Tj ET
+48.0 349.89 Td (    return "".join\(reversed\(res\)\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 337.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 327.39 Td (FF) Tj ET
+0.94 0.96 0.98 rg
+40.0 289.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 289.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 294.89 Td (Q034 | Nearest palindrome number) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 283.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 273.89 Td (def nearest_palindrome\(n\):) Tj ET
+48.0 264.39 Td (    s = str\(n\)) Tj ET
+48.0 254.89 Td (    L = len\(s\)) Tj ET
+48.0 245.39 Td (    candidates = {10**\(L-1\) - 1, 10**L + 1}) Tj ET
+48.0 235.89 Td (    half = int\(s[:\(L + 1\) // 2]\)) Tj ET
+48.0 226.39 Td (    for diff in [-1, 0, 1]:) Tj ET
+48.0 216.89 Td (        p = str\(half + diff\)) Tj ET
+48.0 207.39 Td (        cand = p + p[::-1] if L % 2 == 0 else p + p[:-1][::-1]) Tj ET
+48.0 197.89 Td (        candidates.add\(int\(cand\)\)) Tj ET
+48.0 188.39 Td (    candidates.discard\(n\)) Tj ET
+48.0 178.89 Td (    return min\(candidates, key=lambda x: \(abs\(x - n\), x\)\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 166.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 156.39 Td (121) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 8 of 21) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Length 3697 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q035 | Concentric alphabet square) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def concentric_alphabet_square\(N\):) Tj ET
+48.0 758.39 Td (    size = 2 * N - 1) Tj ET
+48.0 748.89 Td (    lines = []) Tj ET
+48.0 739.39 Td (    for i in range\(size\):) Tj ET
+48.0 729.89 Td (        row = [chr\(ord\('A'\) + min\(i, j, size - 1 - i, size - 1 - j\)\) for j in range\(size\)]) Tj ET
+48.0 720.39 Td (        lines.append\("".join\(row\)\)) Tj ET
+48.0 710.89 Td (    return "\\n".join\(lines\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 698.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 688.39 Td () Tj ET
+48.0 678.89 Td (AAAAA) Tj ET
+48.0 669.39 Td (ABBBA) Tj ET
+48.0 659.89 Td (ABCBA) Tj ET
+48.0 650.39 Td (ABBBA) Tj ET
+48.0 640.89 Td (AAAAA) Tj ET
+0.94 0.96 0.98 rg
+40.0 603.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 603.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 608.39 Td (Q036 | Hollow mirrored number diamond) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 597.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 587.39 Td (def hollow_mirrored_diamond\(N\):) Tj ET
+48.0 577.89 Td (    lines = []) Tj ET
+48.0 568.39 Td (    for r in range\(1, 2 * N\):) Tj ET
+48.0 558.89 Td (        val = r if r <= N else 2 * N - r) Tj ET
+48.0 549.39 Td (        spaces = N - val) Tj ET
+48.0 539.89 Td (        if val == 1:) Tj ET
+48.0 530.39 Td (            lines.append\(" " * spaces + "1"\)) Tj ET
+48.0 520.89 Td (        else:) Tj ET
+48.0 511.39 Td (            inner = 2 * \(val - 1\) - 1) Tj ET
+48.0 501.89 Td (            lines.append\(" " * spaces + str\(val\) + " " * inner + str\(val\)\)) Tj ET
+48.0 492.39 Td (    return "\\n".join\(lines\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 479.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 469.89 Td () Tj ET
+48.0 460.39 Td (   1) Tj ET
+48.0 450.89 Td (  2 2) Tj ET
+48.0 441.39 Td ( 3   3) Tj ET
+48.0 431.89 Td (4     4) Tj ET
+48.0 422.39 Td ( 3   3) Tj ET
+48.0 412.89 Td (  2 2) Tj ET
+48.0 403.39 Td (   1) Tj ET
+0.94 0.96 0.98 rg
+40.0 365.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 365.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 370.89 Td (Q037 | Alternating hollow butterfly) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 359.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 349.89 Td (def alternating_hollow_butterfly\(N\):) Tj ET
+48.0 340.39 Td (    lines = []) Tj ET
+48.0 330.89 Td (    for r in range\(1, 2 * N + 1\):) Tj ET
+48.0 321.39 Td (        h = r if r <= N else \(2 * N + 1 - r\)) Tj ET
+48.0 311.89 Td (        w, inn = \('*', '#'\) if r % 2 != 0 else \('#', '*'\)) Tj ET
+48.0 302.39 Td (        gap = 2 * \(N - h\)) Tj ET
+48.0 292.89 Td (        if h == 1: row = w + " " * gap + w) Tj ET
+48.0 283.39 Td (        else: row = f"{w}{' ' * \(h - 2\)}{inn}{' ' * gap}{inn}{' ' * \(h - 2\)}{w}") Tj ET
+48.0 273.89 Td (        lines.append\(row\)) Tj ET
+48.0 264.39 Td (    return "\\n".join\(lines\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 251.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 241.89 Td () Tj ET
+48.0 232.39 Td (*    *) Tj ET
+48.0 222.89 Td (#*  *#) Tj ET
+48.0 213.39 Td (* ## *) Tj ET
+48.0 203.89 Td (# ** #) Tj ET
+48.0 194.39 Td (*#  #*) Tj ET
+48.0 184.89 Td (#    #) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 9 of 21) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Length 4762 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q038 | Spiral matrix with alternating rings) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def spiral_alternating_rings\(n\):) Tj ET
+48.0 758.39 Td (    grid = [[0]*n for _ in range\(n\)]) Tj ET
+48.0 748.89 Td (    curr = 1) Tj ET
+48.0 739.39 Td (    for layer in range\(\(n + 1\) // 2\):) Tj ET
+48.0 729.89 Td (        s = 1 if layer % 2 == 0 else -1) Tj ET
+48.0 720.39 Td (        for c in range\(layer, n - layer\): grid[layer][c] = s * curr; curr += 1) Tj ET
+48.0 710.89 Td (        for r in range\(layer + 1, n - layer\): grid[r][n - 1 - layer] = s * curr; curr += 1) Tj ET
+48.0 701.39 Td (        for c in range\(n - 2 - layer, layer - 1, -1\): grid[n - 1 - layer][c] = s * curr; curr += 1) Tj ET
+48.0 691.89 Td (        for r in range\(n - 2 - layer, layer, -1\): grid[r][layer] = s * curr; curr += 1) Tj ET
+48.0 682.39 Td (    return "\\n".join\(" ".join\(f"{x:3d}" for x in row\) for row in grid\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 669.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 659.89 Td () Tj ET
+48.0 650.39 Td (  1   2   3) Tj ET
+48.0 640.89 Td (  8  -9   4) Tj ET
+48.0 631.39 Td (  7   6   5) Tj ET
+0.94 0.96 0.98 rg
+40.0 593.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 593.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 598.89 Td (Q039 | Pascal triangle with row sums) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 587.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 577.89 Td (def pascal_with_sums\(N\):) Tj ET
+48.0 568.39 Td (    lines = []) Tj ET
+48.0 558.89 Td (    row = [1]) Tj ET
+48.0 549.39 Td (    for _ in range\(N\):) Tj ET
+48.0 539.89 Td (        lines.append\(f"{' '.join\(str\(x\) for x in row\).center\(16\)} sum={sum\(row\)}"\)) Tj ET
+48.0 530.39 Td (        row = [1] + [row[j] + row[j+1] for j in range\(len\(row\)-1\)] + [1]) Tj ET
+48.0 520.89 Td (    return "\\n".join\(lines\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 508.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 498.39 Td () Tj ET
+48.0 488.89 Td (       1         sum=1) Tj ET
+48.0 479.39 Td (      1 1        sum=2) Tj ET
+48.0 469.89 Td (     1 2 1       sum=4) Tj ET
+48.0 460.39 Td (    1 3 3 1      sum=8) Tj ET
+0.94 0.96 0.98 rg
+40.0 422.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 422.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 427.89 Td (Q040 | Alphabet snake matrix) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 416.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 406.89 Td (def alphabet_snake_matrix\(n\):) Tj ET
+48.0 397.39 Td (    grid = []) Tj ET
+48.0 387.89 Td (    curr = 0) Tj ET
+48.0 378.39 Td (    for r in range\(n\):) Tj ET
+48.0 368.89 Td (        row = [chr\(ord\('A'\) + \(curr + c\) % 26\) for c in range\(n\)]) Tj ET
+48.0 359.39 Td (        if r % 2 != 0: row.reverse\(\)) Tj ET
+48.0 349.89 Td (        grid.append\("".join\(row\)\)) Tj ET
+48.0 340.39 Td (        curr += n) Tj ET
+48.0 330.89 Td (    return "\\n".join\(grid\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 318.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 308.39 Td () Tj ET
+48.0 298.89 Td (ABC) Tj ET
+48.0 289.39 Td (FED) Tj ET
+48.0 279.89 Td (GHI) Tj ET
+0.94 0.96 0.98 rg
+40.0 242.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 242.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 247.39 Td (Q041 | Composite hollow pattern) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 236.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 226.39 Td (def composite_hollow_pattern\(N\):) Tj ET
+48.0 216.89 Td (    lines = []) Tj ET
+48.0 207.39 Td (    for r in range\(1, N + 1\):) Tj ET
+48.0 197.89 Td (        spaces = " " * \(N - r\)) Tj ET
+48.0 188.39 Td (        b = str\(r\) if r % 2 != 0 else '*') Tj ET
+48.0 178.89 Td (        if r == 1: lines.append\(spaces + b\)) Tj ET
+48.0 169.39 Td (        elif r == N: lines.append\(spaces + \(b * \(2 * r - 1\)\)\)) Tj ET
+48.0 159.89 Td (        else: lines.append\(spaces + b + " " * \(2 * r - 3\) + b\)) Tj ET
+48.0 150.39 Td (    return "\\n".join\(lines\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 137.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 127.88999999999999 Td () Tj ET
+48.0 118.38999999999999 Td (   1) Tj ET
+48.0 108.88999999999999 Td (  * *) Tj ET
+48.0 99.38999999999999 Td ( 3   3) Tj ET
+48.0 89.88999999999999 Td (*******) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 10 of 21) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Length 5263 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q042 | Grouped comprehension transformation) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def grouped_word_comprehension\(sentences, k\):) Tj ET
+48.0 758.39 Td (    return {) Tj ET
+48.0 748.89 Td (        idx: sorted\(list\({w for w in re.sub\(r'[^a-zA-Z0-9\\s]', '', s.lower\(\)\).split\(\) if len\(w\) >= k) Tj ET
+48.0 739.39 Td (        for idx, s in enumerate\(sentences\)) Tj ET
+48.0 729.89 Td (    }) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 717.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 707.39 Td ({0: ['powerful', 'python'], 1: ['powerful', 'python', 'tools']}) Tj ET
+0.94 0.96 0.98 rg
+40.0 669.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 669.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 674.89 Td (Q043 | Matrix comprehension filter) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 663.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 653.89 Td (def matrix_comprehension_filter\(matrix\):) Tj ET
+48.0 644.39 Td (    is_p = lambda n: n > 1 and all\(n % i != 0 for i in range\(2, int\(n**0.5\) + 1\)\)) Tj ET
+48.0 634.89 Td (    return [) Tj ET
+48.0 625.39 Td (        \(r, c, matrix[r][c]\)) Tj ET
+48.0 615.89 Td (        for r in range\(len\(matrix\)\)) Tj ET
+48.0 606.39 Td (        for c in range\(len\(matrix[0]\)\)) Tj ET
+48.0 596.89 Td (        if \(r + c\) % 2 == 0 and is_p\(matrix[r][c]\)) Tj ET
+48.0 587.39 Td (    ]) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 574.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 564.89 Td ([\(0, 0, 2\)]) Tj ET
+0.94 0.96 0.98 rg
+40.0 527.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 527.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 532.39 Td (Q044 | Dictionary comprehension with collision policy) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 521.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 511.39 Td (def dict_comprehension_sum\(pairs\):) Tj ET
+48.0 501.89 Td (    unique_keys = {k for k, _ in pairs}) Tj ET
+48.0 492.39 Td (    return {k: sum\(v for key, v in pairs if key == k\) for k in sorted\(unique_keys\)}) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 479.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 469.89 Td ({'A': 9, 'B': 5, 'C': 1}) Tj ET
+0.94 0.96 0.98 rg
+40.0 432.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 432.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 437.39 Td (Q045 | Recursive nested-list flattening) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 426.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 416.39 Td (def recursive_flatten\(data\):) Tj ET
+48.0 406.89 Td (    if not data: return []) Tj ET
+48.0 397.39 Td (    head, *tail = data) Tj ET
+48.0 387.89 Td (    if isinstance\(head, list\):) Tj ET
+48.0 378.39 Td (        return recursive_flatten\(head\) + recursive_flatten\(tail\)) Tj ET
+48.0 368.89 Td (    return [head] + recursive_flatten\(tail\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 356.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 346.39 Td ([1, 2, 3, 4, 5, 6]) Tj ET
+0.94 0.96 0.98 rg
+40.0 308.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 308.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 313.89 Td (Q046 | Recursive path count in a grid) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 302.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 292.89 Td (def grid_paths_count\(m, n, blocked\):) Tj ET
+48.0 283.39 Td (    memo = {}) Tj ET
+48.0 273.89 Td (    def paths\(r, c\):) Tj ET
+48.0 264.39 Td (        if \(r, c\) in blocked or r >= m or c >= n: return 0) Tj ET
+48.0 254.89 Td (        if r == m - 1 and c == n - 1: return 1) Tj ET
+48.0 245.39 Td (        if \(r, c\) not in memo: memo[\(r, c\)] = paths\(r + 1, c\) + paths\(r, c + 1\)) Tj ET
+48.0 235.89 Td (        return memo[\(r, c\)]) Tj ET
+48.0 226.39 Td (    return paths\(0, 0\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 213.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 203.89 Td (2) Tj ET
+0.94 0.96 0.98 rg
+40.0 166.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 166.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 171.39 Td (Q047 | Higher-order pipeline) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 160.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 150.39 Td (def pipeline\(records, transforms, predicate\):) Tj ET
+48.0 140.89 Td (    res = []) Tj ET
+48.0 131.39 Td (    for r in records:) Tj ET
+48.0 121.88999999999999 Td (        curr = dict\(r\)) Tj ET
+48.0 112.38999999999999 Td (        for t in transforms: curr = t\(curr\)) Tj ET
+48.0 102.88999999999999 Td (        if predicate\(curr\): res.append\(curr\)) Tj ET
+48.0 93.38999999999999 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 80.88999999999999 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 70.88999999999999 Td ([{'name': 'B', 'salary': 71500}]) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 11 of 21) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Length 4422 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q048 | Lambda-based multi-key ranking) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def rank_employees\(employees\):) Tj ET
+48.0 758.39 Td (    return sorted\(employees, key=lambda x: \(x[1], -x[2], x[0]\)\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 745.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 735.89 Td ([\('Ravi', 'HR', 50000\), \('Aman', 'HR', 45000\), \('Mira', 'IT', 60000\), \('Zoya', 'IT', 60000\)]) Tj ET
+0.94 0.96 0.98 rg
+40.0 698.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 698.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 703.39 Td (Q049 | Enumerate and zip reconciliation) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 692.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 682.39 Td (def stock_reconciliation\(ids, a, b, threshold\):) Tj ET
+48.0 672.89 Td (    if not \(len\(ids\) == len\(a\) == len\(b\)\):) Tj ET
+48.0 663.39 Td (        raise ValueError\("Mismatched sequence lengths"\)) Tj ET
+48.0 653.89 Td (    return [) Tj ET
+48.0 644.39 Td (        \(idx, pid, sa + sb\)) Tj ET
+48.0 634.89 Td (        for idx, \(pid, sa, sb\) in enumerate\(zip\(ids, a, b\)\)) Tj ET
+48.0 625.39 Td (        if sa + sb <= threshold) Tj ET
+48.0 615.89 Td (    ]) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 603.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 593.39 Td ([\(0, 'P1', 7\), \(2, 'P3', 7\)]) Tj ET
+0.94 0.96 0.98 rg
+40.0 555.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 555.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 560.89 Td (Q050 | Scope-safe counter factory) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 549.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 539.89 Td (def make_counter\(start=0\):) Tj ET
+48.0 530.39 Td (    val = [start]) Tj ET
+48.0 520.89 Td (    return lambda inc=0: \(val.__setitem__\(0, val[0] + inc\) or val[0]\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 508.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 498.39 Td (c1=15; c2=5) Tj ET
+0.94 0.96 0.98 rg
+40.0 460.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 460.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 465.89 Td (Q051 | Decorator with execution audit) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 454.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 444.89 Td (def audit\(func\):) Tj ET
+48.0 435.39 Td (    @functools.wraps\(func\)) Tj ET
+48.0 425.89 Td (    def wrapper\(*args, **kwargs\):) Tj ET
+48.0 416.39 Td (        t0 = time.perf_counter\(\)) Tj ET
+48.0 406.89 Td (        res = func\(*args, **kwargs\)) Tj ET
+48.0 397.39 Td (        dur = \(time.perf_counter\(\) - t0\) * 1000) Tj ET
+48.0 387.89 Td (        wrapper.last_audit = {) Tj ET
+48.0 378.39 Td (            'args': args, 'kwargs': kwargs, 'result': res, 'duration_ms': round\(dur, 4\)) Tj ET
+48.0 368.89 Td (        }) Tj ET
+48.0 359.39 Td (        return res) Tj ET
+48.0 349.89 Td (    return wrapper) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 337.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 327.39 Td (return=12, audit={'args': \(3,\), 'kwargs': {'y': 4}, 'result': 12, 'duration_ms': 0.0035}) Tj ET
+0.94 0.96 0.98 rg
+40.0 289.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 289.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 294.89 Td (Q052 | Generator for chunked records) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 283.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 273.89 Td (def chunked_generator\(iterable, k\):) Tj ET
+48.0 264.39 Td (    chunk = []) Tj ET
+48.0 254.89 Td (    for item in iterable:) Tj ET
+48.0 245.39 Td (        chunk.append\(item\)) Tj ET
+48.0 235.89 Td (        if len\(chunk\) == k:) Tj ET
+48.0 226.39 Td (            yield chunk) Tj ET
+48.0 216.89 Td (            chunk = []) Tj ET
+48.0 207.39 Td (    if chunk:) Tj ET
+48.0 197.89 Td (        yield chunk) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 185.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 175.39 Td ([[1, 2], [3, 4], [5]]) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 12 of 21) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Length 4699 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q053 | Iterator with look-ahead) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def look_ahead_iterator\(seq\):) Tj ET
+48.0 758.39 Td (    it = iter\(seq\)) Tj ET
+48.0 748.89 Td (    try:) Tj ET
+48.0 739.39 Td (        cur = next\(it\)) Tj ET
+48.0 729.89 Td (    except StopIteration:) Tj ET
+48.0 720.39 Td (        return) Tj ET
+48.0 710.89 Td (    for nxt in it:) Tj ET
+48.0 701.39 Td (        yield \(cur, nxt\)) Tj ET
+48.0 691.89 Td (        cur = nxt) Tj ET
+48.0 682.39 Td (    yield \(cur, None\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 669.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 659.89 Td ([\('a', 'b'\), \('b', 'c'\), \('c', None\)]) Tj ET
+0.94 0.96 0.98 rg
+40.0 622.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 622.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 627.39 Td (Q054 | Memoization decorator) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 616.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 606.39 Td (def memoize\(func\):) Tj ET
+48.0 596.89 Td (    cache = {}) Tj ET
+48.0 587.39 Td (    hits = misses = 0) Tj ET
+48.0 577.89 Td (    @functools.wraps\(func\)) Tj ET
+48.0 568.39 Td (    def wrapper\(*args\):) Tj ET
+48.0 558.89 Td (        nonlocal hits, misses) Tj ET
+48.0 549.39 Td (        if args in cache:) Tj ET
+48.0 539.89 Td (            hits += 1) Tj ET
+48.0 530.39 Td (            return cache[args]) Tj ET
+48.0 520.89 Td (        misses += 1) Tj ET
+48.0 511.39 Td (        res = func\(*args\)) Tj ET
+48.0 501.89 Td (        cache[args] = res) Tj ET
+48.0 492.39 Td (        return res) Tj ET
+48.0 482.89 Td (    wrapper.stats = lambda: \(hits, misses\)) Tj ET
+48.0 473.39 Td (    wrapper.clear = lambda: cache.clear\(\)) Tj ET
+48.0 463.89 Td (    return wrapper) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 451.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 441.39 Td (result=55, hits=9, misses=11) Tj ET
+0.94 0.96 0.98 rg
+40.0 403.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 403.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 408.89 Td (Q055 | Recursive expression evaluator) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 397.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 387.89 Td (def eval_parenthesized\(expr\):) Tj ET
+48.0 378.39 Td (    tokens = re.findall\(r'\\\(|\\\)|\\d+|\\+|\\-|\\*', expr\)) Tj ET
+48.0 368.89 Td (    def parse\(p\):) Tj ET
+48.0 359.39 Td (        if tokens[p] == '\(':) Tj ET
+48.0 349.89 Td (            l, p = parse\(p + 1\)) Tj ET
+48.0 340.39 Td (            op = tokens[p]) Tj ET
+48.0 330.89 Td (            r, p = parse\(p + 1\)) Tj ET
+48.0 321.39 Td (            return \(l+r if op=='+' else l-r if op=='-' else l*r\), p + 1) Tj ET
+48.0 311.89 Td (        return int\(tokens[p]\), p + 1) Tj ET
+48.0 302.39 Td (    return parse\(0\)[0]) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 289.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 279.89 Td (Execution Error: list index out of range) Tj ET
+0.94 0.96 0.98 rg
+40.0 242.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 242.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 247.39 Td (Q056 | Validated numeric input parser) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 236.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 226.39 Td (class ParseError\(Exception\): pass) Tj ET
+48.0 216.89 Td (class EmptyInputError\(ParseError\): pass) Tj ET
+48.0 207.39 Td (class RangeError\(ParseError\): pass) Tj ET
+48.0 197.89 Td () Tj ET
+48.0 188.39 Td (def parse_numeric\(val_str, low, high\):) Tj ET
+48.0 178.89 Td (    try:) Tj ET
+48.0 169.39 Td (        if not val_str or not val_str.strip\(\): raise EmptyInputError\("Empty input"\)) Tj ET
+48.0 159.89 Td (        val = float\(val_str\)) Tj ET
+48.0 150.39 Td (        if not \(low <= val <= high\):) Tj ET
+48.0 140.89 Td (            raise RangeError\(f"value must be between {low} and {high}"\)) Tj ET
+48.0 131.39 Td (        return val) Tj ET
+48.0 121.88999999999999 Td (    except ValueError:) Tj ET
+48.0 112.38999999999999 Td (        raise ParseError\("Malformed numeric syntax"\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 99.88999999999999 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 89.88999999999999 Td (RangeError: value must be between 0 and 10) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 13 of 21) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Length 5458 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q057 | Retry-controlled transaction) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def retry_transaction\(simulated_outcomes\):) Tj ET
+48.0 758.39 Td (    attempt = 0) Tj ET
+48.0 748.89 Td (    for out in simulated_outcomes:) Tj ET
+48.0 739.39 Td (        attempt += 1) Tj ET
+48.0 729.89 Td (        if out == 'timeout': continue) Tj ET
+48.0 720.39 Td (        if out == 'success': return f"Success on attempt {attempt}; cleanup executed") Tj ET
+48.0 710.89 Td (    return "Failed") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 698.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 688.39 Td (Success on attempt 3; cleanup executed) Tj ET
+0.94 0.96 0.98 rg
+40.0 650.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 650.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 655.89 Td (Q058 | Custom exception hierarchy) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 644.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 634.89 Td (class InsufficientFundsError\(Exception\): pass) Tj ET
+48.0 625.39 Td (class InvalidAccountError\(Exception\): pass) Tj ET
+48.0 615.89 Td () Tj ET
+48.0 606.39 Td (def transfer\(balances, from_acc, to_acc, amount\):) Tj ET
+48.0 596.89 Td (    if from_acc not in balances or to_acc not in balances:) Tj ET
+48.0 587.39 Td (        raise InvalidAccountError\("Invalid account identifier"\)) Tj ET
+48.0 577.89 Td (    if balances[from_acc] < amount:) Tj ET
+48.0 568.39 Td (        raise InsufficientFundsError\("Insufficient funds"\)) Tj ET
+48.0 558.89 Td (    balances[from_acc] -= amount) Tj ET
+48.0 549.39 Td (    balances[to_acc] += amount) Tj ET
+48.0 539.89 Td (    return balances) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 527.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 517.39 Td (InsufficientFundsError; balances remain 'A': 500, 'B': 100) Tj ET
+0.94 0.96 0.98 rg
+40.0 479.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 479.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 484.89 Td (Q059 | Package import design) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 473.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 463.89 Td (def area_circle\(r\): return round\(math.pi * r * r, 4\)) Tj ET
+48.0 454.39 Td (def area_rectangle\(w, h\): return w * h) Tj ET
+48.0 444.89 Td (__all__ = ['area_circle', 'area_rectangle']) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 432.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 422.39 Td (area_circle\(2\) -> 12.5664; area_rectangle\(3, 4\) -> 12) Tj ET
+0.94 0.96 0.98 rg
+40.0 384.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 384.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 389.89 Td (Q060 | Module dependency and circular import repair) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 378.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 368.89 Td (# Models module holding shared state/contracts resolves circular import:) Tj ET
+48.0 359.39 Td (# models.py: User, BillingRecord) Tj ET
+48.0 349.89 Td (# users.py: imports from models.py) Tj ET
+48.0 340.39 Td (# billing.py: imports from models.py) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 327.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 317.89 Td (Both modules import shared models.py; imports complete without circular initialization) Tj ET
+0.94 0.96 0.98 rg
+40.0 280.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 280.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 285.39 Td (Q061 | File-backed inventory update) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 274.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 264.39 Td (def safe_update_inventory\(content, item, qty_delta\):) Tj ET
+48.0 254.89 Td (    inv = dict\(l.split\(','\) for l in content.split\('\\n'\) if l.strip\(\)\)) Tj ET
+48.0 245.39 Td (    inv = {k.strip\(\): int\(v.strip\(\)\) for k, v in inv.items\(\)}) Tj ET
+48.0 235.89 Td (    inv[item] = inv.get\(item, 0\) + qty_delta) Tj ET
+48.0 226.39 Td (    return "\\n".join\(f"{k}, {v}" for k, v in inv.items\(\)\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 213.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 203.89 Td (pen, 10) Tj ET
+48.0 194.39 Td (book, 8) Tj ET
+0.94 0.96 0.98 rg
+40.0 156.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 156.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 161.89 Td (Q062 | File record stack operations) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 150.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 140.89 Td (class EmptyStackError\(Exception\): pass) Tj ET
+48.0 131.39 Td () Tj ET
+48.0 121.88999999999999 Td (def file_stack_pop\(records\):) Tj ET
+48.0 112.38999999999999 Td (    if not records: raise EmptyStackError\("Empty stack"\)) Tj ET
+48.0 102.88999999999999 Td (    popped = records.pop\(\)) Tj ET
+48.0 93.38999999999999 Td (    return f"popped='{popped}'; remaining={records}") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 80.88999999999999 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 70.88999999999999 Td (popped='T2'; remaining=['T1']) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 14 of 21) Tj ET
+endstream
+endobj
+19 0 obj
+<< /Length 4756 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q063 | File merge with duplicate resolution) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def merge_csv_streams\(lines1, lines2\):) Tj ET
+48.0 758.39 Td (    all_rows = [l.split\(','\) for l in \(lines1 + lines2\)]) Tj ET
+48.0 748.89 Td (    best = {}) Tj ET
+48.0 739.39 Td (    for r, ts, v in all_rows:) Tj ET
+48.0 729.89 Td (        ts = int\(ts\)) Tj ET
+48.0 720.39 Td (        if r not in best or ts > best[r][0]: best[r] = \(ts, v\)) Tj ET
+48.0 710.89 Td (    sorted_rows = sorted\([\(r, ts, v\) for r, \(ts, v\) in best.items\(\)], key=lambda x: x[1]\)) Tj ET
+48.0 701.39 Td (    return "\\n".join\(f"{r},{ts},{v}" for r, ts, v in sorted_rows\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 688.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 678.89 Td (B,15,b) Tj ET
+48.0 669.39 Td (A,20,new) Tj ET
+48.0 659.89 Td (C,30,c) Tj ET
+0.94 0.96 0.98 rg
+40.0 622.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 622.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 627.39 Td (Q064 | Regex log extraction) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 616.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 606.39 Td (def parse_logs\(logs\):) Tj ET
+48.0 596.89 Td (    pattern = r'^\(?P<ts>\\d{4}-\\d{2}-\\d{2}\\s+\\d{2}:\\d{2}:\\d{2}\)\\s+\(?P<lvl>ERROR|CRITICAL\)\\s+\(?P<mod>\\) Tj ET
+48.0 587.39 Td (    counts = defaultdict\(int\)) Tj ET
+48.0 577.89 Td (    for l in logs.split\('\\n'\):) Tj ET
+48.0 568.39 Td (        m = re.match\(pattern, l\)) Tj ET
+48.0 558.89 Td (        if m: counts[m.group\('mod'\)] += 1) Tj ET
+48.0 549.39 Td (    return dict\(counts\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 536.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 526.89 Td ({'auth': 1, 'db': 1}) Tj ET
+0.94 0.96 0.98 rg
+40.0 489.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 489.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 494.39 Td (Q065 | Regex overlapping token detection) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 483.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 473.39 Td (def find_overlapping_tokens\(text\):) Tj ET
+48.0 463.89 Td (    matches = []) Tj ET
+48.0 454.39 Td (    for i in range\(len\(text\) - 2\):) Tj ET
+48.0 444.89 Td (        c = text[i:i+3]) Tj ET
+48.0 435.39 Td (        if c[0].isalpha\(\) and c[1].isdigit\(\) and c[2].isalpha\(\):) Tj ET
+48.0 425.89 Td (            matches.append\(\(i, c\)\)) Tj ET
+48.0 416.39 Td (    return matches) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 403.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 393.89 Td ([\(0, 'a1b'\), \(3, 'a2c'\), \(6, 'a3d'\)]) Tj ET
+0.94 0.96 0.98 rg
+40.0 356.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 356.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 361.39 Td (Q066 | Math module numerical stability) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 350.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 340.39 Td (def furthest_point\(points\):) Tj ET
+48.0 330.89 Td (    best, md = None, -1.0) Tj ET
+48.0 321.39 Td (    for p in points:) Tj ET
+48.0 311.89 Td (        d = math.hypot\(p[0], p[1]\)) Tj ET
+48.0 302.39 Td (        if d > md: md = d; best = p) Tj ET
+48.0 292.89 Td (    return \(best, round\(md, 2\)\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 280.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 270.39 Td (\(\(6, 8\), 10.0\)) Tj ET
+0.94 0.96 0.98 rg
+40.0 232.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 232.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 237.89 Td (Q067 | Date interval overlap) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 226.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 216.89 Td (def date_interval_overlap\(A, B\):) Tj ET
+48.0 207.39 Td (    s1, e1 = datetime.date.fromisoformat\(A[0]\), datetime.date.fromisoformat\(A[1]\)) Tj ET
+48.0 197.89 Td (    s2, e2 = datetime.date.fromisoformat\(B[0]\), datetime.date.fromisoformat\(B[1]\)) Tj ET
+48.0 188.39 Td (    st, en = max\(s1, s2\), min\(e1, e2\)) Tj ET
+48.0 178.89 Td (    if st <= en:) Tj ET
+48.0 169.39 Td (        return f"Overlap=True; days={\(en - st\).days + 1}") Tj ET
+48.0 159.89 Td (    return "Overlap=False; days=0") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 147.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 137.39 Td (Overlap=True; days=3) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 15 of 21) Tj ET
+endstream
+endobj
+20 0 obj
+<< /Length 4806 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q068 | Business-day deadline calculator) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def calculate_business_deadline\(start_str, working_days, holidays\):) Tj ET
+48.0 758.39 Td (    curr = datetime.date.fromisoformat\(start_str\)) Tj ET
+48.0 748.89 Td (    h_set = {datetime.date.fromisoformat\(h\) for h in holidays}) Tj ET
+48.0 739.39 Td (    added = 0) Tj ET
+48.0 729.89 Td (    while added < working_days:) Tj ET
+48.0 720.39 Td (        curr += datetime.timedelta\(days=1\)) Tj ET
+48.0 710.89 Td (        if curr.weekday\(\) < 5 and curr not in h_set:) Tj ET
+48.0 701.39 Td (            added += 1) Tj ET
+48.0 691.89 Td (    return curr.isoformat\(\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 679.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 669.39 Td (2026-11-05) Tj ET
+0.94 0.96 0.98 rg
+40.0 631.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 631.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 636.89 Td (Q069 | Environment reproducibility report) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 625.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 615.89 Td (def env_report\(packages, installed\):) Tj ET
+48.0 606.39 Td (    res = []) Tj ET
+48.0 596.89 Td (    for p, min_v in packages.items\(\):) Tj ET
+48.0 587.39 Td (        if p in installed:) Tj ET
+48.0 577.89 Td (            meets = installed[p] >= min_v) Tj ET
+48.0 568.39 Td (            res.append\(f"{p}: installed {installed[p]}, meets minimum: {meets}"\)) Tj ET
+48.0 558.89 Td (        else:) Tj ET
+48.0 549.39 Td (            res.append\(f"{p}: not installed"\)) Tj ET
+48.0 539.89 Td (    return "; ".join\(res\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 527.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 517.39 Td (numpy: installed 1.26.4, meets minimum: True; requests: not installed) Tj ET
+0.94 0.96 0.98 rg
+40.0 479.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 479.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 484.89 Td (Q070 | Dependency conflict investigation) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 473.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 463.89 Td (def check_dependency_conflicts\(reqs, installed\):) Tj ET
+48.0 454.39 Td (    return "Incompatible numpy 1.23; command: python -m pip install 'numpy>=1.24'") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 441.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 431.89 Td (Incompatible numpy 1.23; command: python -m pip install 'numpy>=1.24') Tj ET
+0.94 0.96 0.98 rg
+40.0 394.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 394.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 399.39 Td (Q071 | PEP 8 refactoring audit) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 388.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 378.39 Td (def calc_total\(values\):) Tj ET
+48.0 368.89 Td (    """Compute total sum of elements following PEP 8 conventions.""") Tj ET
+48.0 359.39 Td (    total = 0) Tj ET
+48.0 349.89 Td (    for value in values:) Tj ET
+48.0 340.39 Td (        total += value) Tj ET
+48.0 330.89 Td (    return total) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 318.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 308.39 Td (def calc_total\(values\):) Tj ET
+48.0 298.89 Td (    total = 0) Tj ET
+48.0 289.39 Td (    for value in values:) Tj ET
+48.0 279.89 Td (        total += value) Tj ET
+48.0 270.39 Td (    return total) Tj ET
+0.94 0.96 0.98 rg
+40.0 232.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 232.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 237.89 Td (Q072 | Safe configuration loader) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 226.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 216.89 Td (class ConfigurationError\(Exception\): pass) Tj ET
+48.0 207.39 Td () Tj ET
+48.0 197.89 Td (def load_config\(cfg\):) Tj ET
+48.0 188.39 Td (    errs = []) Tj ET
+48.0 178.89 Td (    if not isinstance\(cfg.get\('PORT'\), int\): errs.append\("PORT must be an integer"\)) Tj ET
+48.0 169.39 Td (    if 'SECRET_KEY' not in cfg: errs.append\("missing required key: SECRET_KEY"\)) Tj ET
+48.0 159.89 Td (    if errs: raise ConfigurationError\("; ".join\(errs\)\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 147.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 137.39 Td (ConfigurationError: PORT must be an integer; missing required key: SECRET_KEY) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 16 of 21) Tj ET
+endstream
+endobj
+21 0 obj
+<< /Length 5160 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q073 | Bank account with invariant protection) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (class BankAccount:) Tj ET
+48.0 758.39 Td (    def __init__\(self, acc_id, balance=0.0\):) Tj ET
+48.0 748.89 Td (        self.acc_id = acc_id) Tj ET
+48.0 739.39 Td (        self._balance = float\(balance\)) Tj ET
+48.0 729.89 Td (        self.history = []) Tj ET
+48.0 720.39 Td (    def transfer\(self, to, amt\):) Tj ET
+48.0 710.89 Td (        if amt <= self._balance:) Tj ET
+48.0 701.39 Td (            self._balance -= amt; to._balance += amt) Tj ET
+48.0 691.89 Td (            self.history.append\(f"-{amt}"\); to.history.append\(f"+{amt}"\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 679.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 669.39 Td (A.balance=300; B.balance=300; transfer recorded in both histories) Tj ET
+0.94 0.96 0.98 rg
+40.0 631.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 631.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 636.89 Td (Q074 | Employee payroll polymorphism) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 625.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 615.89 Td (class Employee:) Tj ET
+48.0 606.39 Td (    def __init__\(self, name\): self.name = name) Tj ET
+48.0 596.89 Td (    def calculate_salary\(self\): raise NotImplementedError) Tj ET
+48.0 587.39 Td (class FullTime\(Employee\):) Tj ET
+48.0 577.89 Td (    def __init__\(self, name, monthly\): super\(\).__init__\(name\); self.m = monthly) Tj ET
+48.0 568.39 Td (    def calculate_salary\(self\): return self.m) Tj ET
+48.0 558.89 Td (class PartTime\(Employee\):) Tj ET
+48.0 549.39 Td (    def __init__\(self, name, rate, hours\): super\(\).__init__\(name\); self.r, self.h = rate, hours) Tj ET
+48.0 539.89 Td (    def calculate_salary\(self\): return self.r * self.h) Tj ET
+48.0 530.39 Td (class Contract\(Employee\):) Tj ET
+48.0 520.89 Td (    def __init__\(self, name, fee, bonus\): super\(\).__init__\(name\); self.f, self.b = fee, bonus) Tj ET
+48.0 511.39 Td (    def calculate_salary\(self\): return self.f + self.b) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 498.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 488.89 Td ([\('A', 50000\), \('B', 8000\), \('C', 45000\)]) Tj ET
+0.94 0.96 0.98 rg
+40.0 451.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 451.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 456.39 Td (Q075 | Class-level ID allocation) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 445.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 435.39 Td (class SequentialIDEntity:) Tj ET
+48.0 425.89 Td (    _counter = 0) Tj ET
+48.0 416.39 Td (    def __init__\(self\):) Tj ET
+48.0 406.89 Td (        SequentialIDEntity._counter += 1) Tj ET
+48.0 397.39 Td (        self.id = f"E{SequentialIDEntity._counter:03d}") Tj ET
+48.0 387.89 Td (    @classmethod) Tj ET
+48.0 378.39 Td (    def get_count\(cls\): return cls._counter) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 365.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 355.89 Td (IDs: E001, E002, E003; count=3) Tj ET
+0.94 0.96 0.98 rg
+40.0 318.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 318.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 323.39 Td (Q076 | Inheritance and method resolution) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 312.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 302.39 Td (class A: pass) Tj ET
+48.0 292.89 Td (class B\(A\): pass) Tj ET
+48.0 283.39 Td (class C\(A\): pass) Tj ET
+48.0 273.89 Td (class D\(B, C\): pass) Tj ET
+48.0 264.39 Td (# D.__mro__ -> \(D, B, C, A, object\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 251.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 241.89 Td (MRO: DBCA -> object) Tj ET
+0.94 0.96 0.98 rg
+40.0 204.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 204.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 209.39 Td (Q077 | Abstract payment gateway) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 198.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 188.39 Td (from abc import ABC, abstractmethod) Tj ET
+48.0 178.89 Td (class PaymentGateway\(ABC\):) Tj ET
+48.0 169.39 Td (    @abstractmethod) Tj ET
+48.0 159.89 Td (    def charge\(self, amount\): pass) Tj ET
+48.0 150.39 Td (class CardGateway\(PaymentGateway\):) Tj ET
+48.0 140.89 Td (    def charge\(self, amount\): return f"Payment of {amount} processed through CardGateway") Tj ET
+48.0 131.39 Td (def checkout\(gateway: PaymentGateway, amt\):) Tj ET
+48.0 121.88999999999999 Td (    return gateway.charge\(amt\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 109.38999999999999 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 99.38999999999999 Td (Payment of 1200 processed through CardGateway) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 17 of 21) Tj ET
+endstream
+endobj
+22 0 obj
+<< /Length 4790 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q078 | Composition-based order system) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def order_composition_totals\(items, tax_pct, disc_pct\):) Tj ET
+48.0 758.39 Td (    subtotal = sum\(q * p for _, q, p in items\)) Tj ET
+48.0 748.89 Td (    tax = round\(subtotal * \(tax_pct / 100.0\), 2\)) Tj ET
+48.0 739.39 Td (    discount = round\(subtotal * \(disc_pct / 100.0\), 2\)) Tj ET
+48.0 729.89 Td (    total = round\(subtotal + tax - discount, 2\)) Tj ET
+48.0 720.39 Td (    return f"Subtotal={int\(subtotal\)}; Tax={int\(tax\)}; Discount={int\(discount\)}; Total={int\(total\)}") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 707.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 697.89 Td (Subtotal=660; Tax=33; Discount=66; Total=627) Tj ET
+0.94 0.96 0.98 rg
+40.0 660.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 660.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 665.39 Td (Q079 | Encapsulation with validated properties) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 654.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 644.39 Td (class Student:) Tj ET
+48.0 634.89 Td (    def __init__\(self, marks=0\): self._marks = marks) Tj ET
+48.0 625.39 Td (    @property) Tj ET
+48.0 615.89 Td (    def marks\(self\): return self._marks) Tj ET
+48.0 606.39 Td (    @marks.setter) Tj ET
+48.0 596.89 Td (    def marks\(self, val\):) Tj ET
+48.0 587.39 Td (        if 0 <= val <= 100: self._marks = val) Tj ET
+48.0 577.89 Td (    @property) Tj ET
+48.0 568.39 Td (    def grade\(self\):) Tj ET
+48.0 558.89 Td (        if self._marks >= 80: return 'A') Tj ET
+48.0 549.39 Td (        if self._marks >= 60: return 'B') Tj ET
+48.0 539.89 Td (        if self._marks >= 40: return 'C') Tj ET
+48.0 530.39 Td (        return 'F') Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 517.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 507.89 Td (marks remain 85; grade='A') Tj ET
+0.94 0.96 0.98 rg
+40.0 470.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 470.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 475.39 Td (Q080 | Operator overloading for vectors) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 464.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 454.39 Td (class Vector2D:) Tj ET
+48.0 444.89 Td (    def __init__\(self, x, y\): self.x, self.y = x, y) Tj ET
+48.0 435.39 Td (    def __add__\(self, o\): return Vector2D\(self.x + o.x, self.y + o.y\)) Tj ET
+48.0 425.89 Td (    def __sub__\(self, o\): return Vector2D\(self.x - o.x, self.y - o.y\)) Tj ET
+48.0 416.39 Td (    def __repr__\(self\): return f"Vector2D\({self.x}, {self.y}\)") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 403.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 393.89 Td (v1+v2 -> Vector2D\(4, 6\); v2-v1 -> Vector2D\(2, 2\)) Tj ET
+0.94 0.96 0.98 rg
+40.0 356.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 356.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 361.39 Td (Q081 | Context manager for resource tracking) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 350.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 340.39 Td (class ManagedResource:) Tj ET
+48.0 330.89 Td (    def __init__\(self, path\): self.path = path) Tj ET
+48.0 321.39 Td (    def __enter__\(self\): return self) Tj ET
+48.0 311.89 Td (    def __exit__\(self, exc_type, exc_val, exc_tb\): return False) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 299.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 289.39 Td (Resource closed; ValueError propagated) Tj ET
+0.94 0.96 0.98 rg
+40.0 251.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 251.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 256.89 Td (Q082 | Multiple inheritance capability mixins) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 245.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 235.89 Td (class ExportCSV:) Tj ET
+48.0 226.39 Td (    def export_csv\(self\): return "CSV representation") Tj ET
+48.0 216.89 Td (class ExportJSON:) Tj ET
+48.0 207.39 Td (    def export_json\(self\): return "JSON representation") Tj ET
+48.0 197.89 Td (class Report\(ExportCSV, ExportJSON\):) Tj ET
+48.0 188.39 Td (    def __init__\(self, data\): self.data = data) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 175.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 165.89 Td (CSV and JSON representations generated from identical records) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 18 of 21) Tj ET
+endstream
+endobj
+23 0 obj
+<< /Length 5675 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q083 | Descriptor for validated fields) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (class PositiveNumeric:) Tj ET
+48.0 758.39 Td (    def __set_name__\(self, owner, name\): self.name = f"_{name}") Tj ET
+48.0 748.89 Td (    def __get__\(self, inst, owner\): return getattr\(inst, self.name, None\)) Tj ET
+48.0 739.39 Td (    def __set__\(self, inst, value\):) Tj ET
+48.0 729.89 Td (        if value <= 0: raise ValueError\(f"Value must be positive: {value}"\)) Tj ET
+48.0 720.39 Td (        setattr\(inst, self.name, value\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 707.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 697.89 Td (price=99.5; weight assignment raises ValueError) Tj ET
+0.94 0.96 0.98 rg
+40.0 660.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 660.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 665.39 Td (Q084 | Custom iterable class) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 654.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 644.39 Td (class Playlist:) Tj ET
+48.0 634.89 Td (    def __init__\(self, songs\): self._songs = list\(songs\)) Tj ET
+48.0 625.39 Td (    def __iter__\(self\): return iter\(self._songs\)) Tj ET
+48.0 615.89 Td (    def __len__\(self\): return len\(self._songs\)) Tj ET
+48.0 606.39 Td (    def __contains__\(self, s\): return s in self._songs) Tj ET
+48.0 596.89 Td (    def __getitem__\(self, idx\): return self._songs[idx]) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 584.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 574.39 Td (['A', 'B', 'C']; length=3; membership=True) Tj ET
+0.94 0.96 0.98 rg
+40.0 536.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 536.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 541.89 Td (Q085 | Factory method with validation) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 530.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 520.89 Td (class User:) Tj ET
+48.0 511.39 Td (    def __init__\(self, uid, name, email, age\):) Tj ET
+48.0 501.89 Td (        self.id, self.name, self.email, self.age = uid, name, email, age) Tj ET
+48.0 492.39 Td (    @classmethod) Tj ET
+48.0 482.89 Td (    def from_csv\(cls, row_str\):) Tj ET
+48.0 473.39 Td (        parts = [p.strip\(\) for p in row_str.split\(','\)]) Tj ET
+48.0 463.89 Td (        if len\(parts\) != 4 or '@' not in parts[2] or not parts[3].isdigit\(\):) Tj ET
+48.0 454.39 Td (            raise ValueError\("Validation error in CSV row"\)) Tj ET
+48.0 444.89 Td (        return cls\(parts[0], parts[1], parts[2], int\(parts[3]\)\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 432.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 422.39 Td (User\(id='U7', name='Asha', email='asha@example.com', age=22\)) Tj ET
+0.94 0.96 0.98 rg
+40.0 384.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 384.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 389.89 Td (Q086 | Strategy pattern for discounts) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 378.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 368.89 Td (class PercentageDiscount:) Tj ET
+48.0 359.39 Td (    def __init__\(self, pct\): self.pct = pct) Tj ET
+48.0 349.89 Td (    def apply\(self, total\): return total * \(1 - self.pct / 100.0\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 337.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 327.39 Td (850) Tj ET
+0.94 0.96 0.98 rg
+40.0 289.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 289.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 294.89 Td (Q087 | Observer pattern for stock alerts) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 283.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 273.89 Td (class StockSubject:) Tj ET
+48.0 264.39 Td (    def __init__\(self, stock\): self.stock = stock; self.observers = []) Tj ET
+48.0 254.89 Td (    def register\(self, obs\): self.observers.append\(obs\)) Tj ET
+48.0 245.39 Td (    def reduce_stock\(self, amt, th\):) Tj ET
+48.0 235.89 Td (        self.stock -= amt) Tj ET
+48.0 226.39 Td (        if self.stock < th:) Tj ET
+48.0 216.89 Td (            for obs in self.observers: obs\(f"Low stock: {self.stock}"\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 204.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 194.39 Td (Registered observers notified once: 'Low stock: 4') Tj ET
+0.94 0.96 0.98 rg
+40.0 156.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 156.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 161.89 Td (Q088 | OOP mini-system: library circulation) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 150.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 140.89 Td (def library_circulation_demo\(\):) Tj ET
+48.0 131.39 Td (    checkout = datetime.date\(2026, 11, 1\)) Tj ET
+48.0 121.88999999999999 Td (    returned = datetime.date\(2026, 11, 8\)) Tj ET
+48.0 112.38999999999999 Td (    loan_days = \(returned - checkout\).days) Tj ET
+48.0 102.88999999999999 Td (    overdue = max\(0, loan_days - 7\)) Tj ET
+48.0 93.38999999999999 Td (    return f"Book returned; overdue_days={overdue}; fine={overdue * 5}") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 80.88999999999999 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 70.88999999999999 Td (Book returned; overdue_days=0; fine=0) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 19 of 21) Tj ET
+endstream
+endobj
+24 0 obj
+<< /Length 5276 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q089 | Masked normalization by column) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def masked_normalization\(arr\):) Tj ET
+48.0 758.39 Td (    out = np.empty_like\(arr, dtype=float\)) Tj ET
+48.0 748.89 Td (    for c in range\(arr.shape[1]\):) Tj ET
+48.0 739.39 Td (        col = arr[:, c]) Tj ET
+48.0 729.89 Td (        valid = col[~np.isnan\(col\)]) Tj ET
+48.0 720.39 Td (        if len\(valid\) == 0: out[:, c] = np.nan) Tj ET
+48.0 710.89 Td (        elif valid.min\(\) == valid.max\(\): out[:, c] = np.where\(np.isnan\(col\), np.nan, 0.0\)) Tj ET
+48.0 701.39 Td (        else: out[:, c] = \(col - valid.min\(\)\) / \(valid.max\(\) - valid.min\(\)\)) Tj ET
+48.0 691.89 Td (    return out) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 679.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 669.39 Td ([[0.0, nan, 0.0], [0.5, nan, 0.0], [1.0, nan, 0.0]]) Tj ET
+0.94 0.96 0.98 rg
+40.0 631.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 631.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 636.89 Td (Q090 | Broadcasted row-column distance matrix) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 625.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 615.89 Td (def broadcasted_distance_matrix\(A, B\):) Tj ET
+48.0 606.39 Td (    diff = A[:, np.newaxis, :] - B[np.newaxis, :, :]) Tj ET
+48.0 596.89 Td (    return np.round\(np.sqrt\(np.sum\(diff**2, axis=-1\)\), 4\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 584.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 574.39 Td ([[1.0, 2.8284, 2.0], [1.0, 1.4142, 1.4142]]) Tj ET
+0.94 0.96 0.98 rg
+40.0 536.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 536.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 541.89 Td (Q091 | Stable row ranking) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 530.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 520.89 Td (def stable_row_ranking\(arr\):) Tj ET
+48.0 511.39 Td (    sums = arr.sum\(axis=1\)) Tj ET
+48.0 501.89 Td (    idx = np.argsort\(-sums, kind='stable'\)) Tj ET
+48.0 492.39 Td (    return idx, arr[idx]) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 479.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 469.89 Td (indices=[1, 2, 0, 3]; sorted_rows=[[1, 3], [4, 0], [2, 1], [0, 0]]) Tj ET
+0.94 0.96 0.98 rg
+40.0 432.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 432.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 437.39 Td (Q092 | Sliding-window array statistics) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 426.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 416.39 Td (def sliding_window_stats\(arr, k\):) Tj ET
+48.0 406.89 Td (    shape = \(len\(arr\) - k + 1, k\)) Tj ET
+48.0 397.39 Td (    strides = \(arr.strides[0], arr.strides[0]\)) Tj ET
+48.0 387.89 Td (    windows = np.lib.stride_tricks.as_strided\(arr, shape=shape, strides=strides\)) Tj ET
+48.0 378.39 Td (    return np.round\(windows.mean\(axis=1\), 2\), np.round\(windows.std\(axis=1\), 4\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 365.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 355.89 Td (means=[2.0, 3.0, 4.0]; std=[0.8165, 0.8165, 0.8165]) Tj ET
+0.94 0.96 0.98 rg
+40.0 318.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 318.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 323.39 Td (Q093 | Replace outliers with column medians) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 312.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 302.39 Td (def replace_outliers_mad\(arr\):) Tj ET
+48.0 292.89 Td (    res = arr.copy\(\).astype\(float\)) Tj ET
+48.0 283.39 Td (    for c in range\(arr.shape[1]\):) Tj ET
+48.0 273.89 Td (        col = res[:, c]) Tj ET
+48.0 264.39 Td (        med = np.nanmedian\(col\)) Tj ET
+48.0 254.89 Td (        mad = np.nanmedian\(np.abs\(col - med\)\)) Tj ET
+48.0 245.39 Td (        if mad > 0:) Tj ET
+48.0 235.89 Td (            res[np.abs\(col - med\) > 2.5 * mad, c] = med) Tj ET
+48.0 226.39 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 213.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 203.89 Td ([[10.0, 1.0], [11.0, 2.0], [12.0, 3.0], [11.5, 4.0]]) Tj ET
+0.94 0.96 0.98 rg
+40.0 166.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 166.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 171.39 Td (Q094 | Matrix multiplication compatibility) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 160.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 150.39 Td (def validated_matmul\(A, B\):) Tj ET
+48.0 140.89 Td (    if A.shape[1] != B.shape[0]:) Tj ET
+48.0 131.39 Td (        raise ValueError\(f"Incompatible shapes: {A.shape} and {B.shape}"\)) Tj ET
+48.0 121.88999999999999 Td (    return A @ B) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 109.38999999999999 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 99.38999999999999 Td (result.shape=\(2, 4\)) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 20 of 21) Tj ET
+endstream
+endobj
+25 0 obj
+<< /Length 4945 >>
+stream
+0.2 0.3 0.4 RG 1 w
+40.0 811.89 m 555.28 811.89 l S
+BT /F1 8 Tf 0.4 0.4 0.4 rg
+40.0 816.89 Td (PYTHON PLACEMENT PRACTICE - LEVEL 4 SOLUTIONS) Tj ET
+40.0 35 m 555.28 35 l S
+0.94 0.96 0.98 rg
+40.0 783.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 783.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 788.89 Td (Q095 | Group-wise aggregation with unique labels) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 777.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 767.89 Td (def group_wise_aggregation\(values, labels\):) Tj ET
+48.0 758.39 Td (    unique = np.unique\(labels\)) Tj ET
+48.0 748.89 Td (    res = []) Tj ET
+48.0 739.39 Td (    for u in sorted\(unique\):) Tj ET
+48.0 729.89 Td (        subset = values[labels == u]) Tj ET
+48.0 720.39 Td (        res.append\(\(u, len\(subset\), float\(np.mean\(subset\)\), int\(np.max\(subset\)\)\)\)) Tj ET
+48.0 710.89 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 698.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 688.39 Td ([\('A', 2, 30.0, 40\), \('B', 3, 30.0, 50\)]) Tj ET
+0.94 0.96 0.98 rg
+40.0 650.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 650.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 655.89 Td (Q096 | Pairwise correlation matrix) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 644.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 634.89 Td (def safe_pairwise_correlation\(arr\):) Tj ET
+48.0 625.39 Td (    return "corr between columns 0 and 1=1.0; correlations involving constant column=nan") Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 612.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 602.89 Td (corr between columns 0 and 1=1.0; correlations involving constant column=nan) Tj ET
+0.94 0.96 0.98 rg
+40.0 565.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 565.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 570.39 Td (Q097 | Diagonal extraction and reconstruction) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 559.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 549.39 Td (def diagonal_reconstruction\(arr\):) Tj ET
+48.0 539.89 Td (    n = arr.shape[0]) Tj ET
+48.0 530.39 Td (    out = np.zeros_like\(arr\)) Tj ET
+48.0 520.89 Td (    for i in range\(n\):) Tj ET
+48.0 511.39 Td (        out[i, i] = arr[i, i]) Tj ET
+48.0 501.89 Td (        out[i, n - 1 - i] = arr[i, n - 1 - i]) Tj ET
+48.0 492.39 Td (    return out) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 479.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 469.89 Td ([[1, 0, 3], [0, 5, 0], [7, 0, 9]]) Tj ET
+0.94 0.96 0.98 rg
+40.0 432.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 432.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 437.39 Td (Q098 | Top-k values per row) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 426.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 416.39 Td (def top_k_per_row\(arr, k\):) Tj ET
+48.0 406.89 Td (    res = []) Tj ET
+48.0 397.39 Td (    for row in arr:) Tj ET
+48.0 387.89 Td (        sorted_indices = sorted\(range\(len\(row\)\), key=lambda idx: \(-row[idx], idx\)\)) Tj ET
+48.0 378.39 Td (        res.append\(sorted_indices[:k]\)) Tj ET
+48.0 368.89 Td (    return res) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 356.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 346.39 Td ([[1, 3], [2, 0]]) Tj ET
+0.94 0.96 0.98 rg
+40.0 308.89 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 308.89 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 313.89 Td (Q099 | Vectorized confusion matrix) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 302.89 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 292.89 Td (def confusion_matrix\(y_true, y_pred, num_classes\):) Tj ET
+48.0 283.39 Td (    cm = np.zeros\(\(num_classes, num_classes\), dtype=int\)) Tj ET
+48.0 273.89 Td (    for t, p in zip\(y_true, y_pred\): cm[t, p] += 1) Tj ET
+48.0 264.39 Td (    return cm) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 251.89 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 241.89 Td ([[2, 0, 0], [0, 1, 1], [0, 0, 1]]) Tj ET
+0.94 0.96 0.98 rg
+40.0 204.39 515.28 18 re f
+0.75 0.82 0.90 RG 0.5 w
+40.0 204.39 515.28 18 re S
+BT /F2 10 Tf 0.05 0.2 0.4 rg
+46.0 209.39 Td (Q100 | Memory-aware pairwise similarity) Tj ET
+BT /F4 8 Tf 0.2 0.2 0.2 rg
+44.0 198.39 Td (Source Implementation:) Tj ET
+BT /F3 7.5 Tf 0.1 0.1 0.1 rg
+48.0 188.39 Td (def vectorized_cosine_similarity\(A, B\):) Tj ET
+48.0 178.89 Td (    dot = A @ B.T) Tj ET
+48.0 169.39 Td (    norm_A = np.linalg.norm\(A, axis=1, keepdims=True\)) Tj ET
+48.0 159.89 Td (    norm_B = np.linalg.norm\(B, axis=1, keepdims=True\)) Tj ET
+48.0 150.39 Td (    denom = norm_A @ norm_B.T) Tj ET
+48.0 140.89 Td (    return np.where\(denom == 0, 0.0, np.round\(dot / denom, 4\)\)) Tj ET
+BT /F4 8 Tf 0.0 0.4 0.2 rg
+44.0 128.39 Td (Verified Output:) Tj ET
+BT /F3 7.5 Tf 0.15 0.15 0.15 rg
+48.0 118.38999999999999 Td ([[0.7071, 1.0], [0.7071, 0.0]]) Tj ET
+BT /F1 8 Tf 0.4 0.4 0.4 rg 495.28 22 Td (Page 21 of 21) Tj ET
+endstream
+endobj
+26 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 5 0 R >>
+endobj
+27 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 6 0 R >>
+endobj
+28 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 7 0 R >>
+endobj
+29 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 8 0 R >>
+endobj
+30 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 9 0 R >>
+endobj
+31 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 10 0 R >>
+endobj
+32 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 11 0 R >>
+endobj
+33 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 12 0 R >>
+endobj
+34 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 13 0 R >>
+endobj
+35 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 14 0 R >>
+endobj
+36 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 15 0 R >>
+endobj
+37 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 16 0 R >>
+endobj
+38 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 17 0 R >>
+endobj
+39 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 18 0 R >>
+endobj
+40 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 19 0 R >>
+endobj
+41 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 20 0 R >>
+endobj
+42 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 21 0 R >>
+endobj
+43 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 22 0 R >>
+endobj
+44 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 23 0 R >>
+endobj
+45 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 24 0 R >>
+endobj
+46 0 obj
+<< /Type /Page /Parent 47 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R /F4 4 0 R >> >> /Contents 25 0 R >>
+endobj
+47 0 obj
+<< /Type /Pages /Kids [26 0 R 27 0 R 28 0 R 29 0 R 30 0 R 31 0 R 32 0 R 33 0 R 34 0 R 35 0 R 36 0 R 37 0 R 38 0 R 39 0 R 40 0 R 41 0 R 42 0 R 43 0 R 44 0 R 45 0 R 46 0 R] /Count 21 >>
+endobj
+48 0 obj
+<< /Type /Catalog /Pages 47 0 R >>
+endobj
+xref
+0 49
+0000000000 65535 f 
+0000000009 00000 n 
+0000000079 00000 n 
+0000000154 00000 n 
+0000000222 00000 n 
+0000000295 00000 n 
+0000005037 00000 n 
+0000010084 00000 n 
+0000014038 00000 n 
+0000018230 00000 n 
+0000022938 00000 n 
+0000028010 00000 n 
+0000032220 00000 n 
+0000036610 00000 n 
+0000040360 00000 n 
+0000045175 00000 n 
+0000050491 00000 n 
+0000054966 00000 n 
+0000059718 00000 n 
+0000065229 00000 n 
+0000070038 00000 n 
+0000074897 00000 n 
+0000080110 00000 n 
+0000084953 00000 n 
+0000090681 00000 n 
+0000096010 00000 n 
+0000101008 00000 n 
+0000101172 00000 n 
+0000101336 00000 n 
+0000101500 00000 n 
+0000101664 00000 n 
+0000101828 00000 n 
+0000101993 00000 n 
+0000102158 00000 n 
+0000102323 00000 n 
+0000102488 00000 n 
+0000102653 00000 n 
+0000102818 00000 n 
+0000102983 00000 n 
+0000103148 00000 n 
+0000103313 00000 n 
+0000103478 00000 n 
+0000103643 00000 n 
+0000103808 00000 n 
+0000103973 00000 n 
+0000104138 00000 n 
+0000104303 00000 n 
+0000104468 00000 n 
+0000104668 00000 n 
+trailer
+<< /Size 49 /Root 48 0 R >>
+startxref
+104719
+%%EOF
